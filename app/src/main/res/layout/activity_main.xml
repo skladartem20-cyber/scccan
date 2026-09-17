@@ -1,0 +1,103 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/bg"
+    android:fillViewport="true">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:padding="16dp">
+
+        <!-- Активная база -->
+        <TextView
+            android:id="@+id/active_store"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@drawable/last_scan_bg"
+            android:padding="14dp"
+            android:textColor="@color/primary_dark"
+            android:textSize="15sp"
+            android:textStyle="bold" />
+
+        <!-- Язык -->
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="14dp"
+            android:gravity="center_vertical"
+            android:orientation="horizontal">
+
+            <TextView
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:text="@string/language"
+                android:textColor="@color/text"
+                android:textSize="15sp" />
+
+            <TextView
+                android:id="@+id/lang_ru"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:background="@drawable/chip_selector"
+                android:paddingHorizontal="18dp"
+                android:paddingVertical="8dp"
+                android:text="RU"
+                android:textColor="@color/chip_text"
+                android:textStyle="bold" />
+
+            <TextView
+                android:id="@+id/lang_zh"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="8dp"
+                android:background="@drawable/chip_selector"
+                android:paddingHorizontal="18dp"
+                android:paddingVertical="8dp"
+                android:text="中文"
+                android:textColor="@color/chip_text"
+                android:textStyle="bold" />
+        </LinearLayout>
+
+        <!-- Карточки разделов -->
+        <LinearLayout
+            android:id="@+id/card_stores"
+            style="@style/MenuCard"
+            android:layout_marginTop="16dp">
+
+            <TextView style="@style/MenuTitle" android:text="@string/menu_stores" />
+            <TextView style="@style/MenuDesc" android:text="@string/menu_stores_desc" />
+        </LinearLayout>
+
+        <LinearLayout
+            android:id="@+id/card_scan"
+            style="@style/MenuCard"
+            android:layout_marginTop="12dp">
+
+            <TextView style="@style/MenuTitle" android:text="@string/menu_scan" />
+            <TextView style="@style/MenuDesc" android:text="@string/menu_scan_desc" />
+        </LinearLayout>
+
+        <LinearLayout
+            android:id="@+id/card_reconcile"
+            style="@style/MenuCard"
+            android:layout_marginTop="12dp">
+
+            <TextView style="@style/MenuTitle" android:text="@string/menu_reconcile" />
+            <TextView style="@style/MenuDesc" android:text="@string/menu_reconcile_desc" />
+        </LinearLayout>
+
+        <LinearLayout
+            android:id="@+id/card_settings"
+            style="@style/MenuCard"
+            android:layout_marginTop="12dp">
+
+            <TextView style="@style/MenuTitle" android:text="@string/menu_settings" />
+            <TextView style="@style/MenuDesc" android:text="@string/menu_settings_desc" />
+        </LinearLayout>
+
+    </LinearLayout>
+</ScrollView>

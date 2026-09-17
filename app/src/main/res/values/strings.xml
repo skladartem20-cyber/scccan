@@ -1,0 +1,131 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="app_name">Сканер склада</string>
+
+    <!-- Общее -->
+    <string name="ok">ОК</string>
+    <string name="cancel">Отмена</string>
+    <string name="yes">Да</string>
+    <string name="no">Нет</string>
+    <string name="close">Закрыть</string>
+    <string name="save">Сохранить</string>
+    <string name="delete">Удалить</string>
+    <string name="rename">Переименовать</string>
+    <string name="share">Поделиться</string>
+    <string name="search">Поиск</string>
+    <string name="add">Добавить</string>
+    <string name="empty">Пусто</string>
+
+    <!-- Главное меню -->
+    <string name="menu_stores">Магазины (базы товаров)</string>
+    <string name="menu_stores_desc">Загрузка баз .xlsx, привязка базы к магазину, выбор активной базы</string>
+    <string name="menu_scan">Сканирование и подсчёт</string>
+    <string name="menu_scan_desc">Быстрое сканирование паллета: сколько и каких товаров отсканировано</string>
+    <string name="menu_reconcile">Сверка и расхождения</string>
+    <string name="menu_reconcile_desc">Сравнение факта с плановым количеством, поиск недостач и излишков</string>
+    <string name="menu_settings">Настройки</string>
+    <string name="menu_settings_desc">Язык, режим сканера, звук и вибрация</string>
+    <string name="language">Язык</string>
+    <string name="lang_ru">Русский</string>
+    <string name="lang_zh">中文 (китайский)</string>
+    <string name="active_store_none">Активная база не выбрана</string>
+    <string name="active_store_fmt">Активная база: %1$s</string>
+
+    <!-- Магазины -->
+    <string name="stores_title">Магазины и базы товаров</string>
+    <string name="import_db">Импорт базы (.xlsx)</string>
+    <string name="no_stores">Пока нет ни одной базы. Нажмите «Импорт базы», чтобы загрузить файл .xlsx от магазина.</string>
+    <string name="products_count_fmt">Товаров: %1$d</string>
+    <string name="set_active">Сделать активной</string>
+    <string name="store_active_badge">АКТИВНАЯ</string>
+    <string name="store_deleted">База удалена</string>
+    <string name="delete_store_confirm_fmt">Удалить базу «%1$s» и все её товары?</string>
+    <string name="rename_store">Название магазина / базы</string>
+    <string name="store_selected_fmt">Активная база: %1$s</string>
+
+    <!-- Импорт / привязка колонок -->
+    <string name="import_parsing">Читаю файл…</string>
+    <string name="import_error">Не удалось прочитать файл. Проверьте, что это .xlsx.</string>
+    <string name="import_no_rows">В файле не найдено строк с товарами.</string>
+    <string name="mapping_title">Привязка колонок и магазина</string>
+    <string name="mapping_hint">Проверьте, что колонки определены правильно, задайте название магазина и сохраните базу.</string>
+    <string name="sheet_label">Лист книги</string>
+    <string name="header_row">Строка заголовков</string>
+    <string name="barcode_col">Колонка «Штрихкод»</string>
+    <string name="name_col">Колонка «Название товара»</string>
+    <string name="article_col">Колонка «Артикул» (необязательно)</string>
+    <string name="column_none">— нет —</string>
+    <string name="rows_detected_fmt">Найдено товаров: %1$d</string>
+    <string name="store_name_hint">Название магазина / базы</string>
+    <string name="store_note_hint">Примечание (необязательно)</string>
+    <string name="store_name_required">Укажите название магазина</string>
+    <string name="barcode_col_required">Выберите колонку со штрихкодом</string>
+    <string name="preview">Предпросмотр</string>
+    <string name="save_store">Сохранить базу</string>
+    <string name="store_saved_fmt">База «%1$s» сохранена (%2$d товаров)</string>
+
+    <!-- Сканирование -->
+    <string name="scan_title">Сканирование и подсчёт</string>
+    <string name="scan_hint">Сканируйте товары один за другим. Приложение считает количество каждого штрихкода.</string>
+    <string name="no_active_store_warn">Активная база не выбрана — названия товаров показываться не будут. Выберите базу в разделе «Магазины».</string>
+    <string name="last_scanned">Последний товар</string>
+    <string name="not_in_base">Нет в базе</string>
+    <string name="unknown_product">Неизвестный товар</string>
+    <string name="total_lines_fmt">Позиций: %1$d</string>
+    <string name="total_qty_fmt">Всего единиц: %1$d</string>
+    <string name="clear_all">Очистить</string>
+    <string name="clear_confirm">Очистить весь текущий подсчёт?</string>
+    <string name="manual_input">Ввести штрихкод вручную</string>
+    <string name="barcode_hint">Штрихкод</string>
+    <string name="remove_line">Убрать позицию</string>
+    <string name="export">Экспорт (CSV)</string>
+    <string name="exported_fmt">Сохранено в файл:\n%1$s</string>
+    <string name="save_as_expected">Сохранить как «план» для сверки</string>
+    <string name="saved_expected">Текущий подсчёт сохранён как плановое количество</string>
+    <string name="qty_col">Кол-во</string>
+    <string name="session_saved">Подсчёт сохранён</string>
+
+    <!-- Сверка -->
+    <string name="reconcile_title">Сверка и расхождения</string>
+    <string name="reconcile_hint">Загрузите плановое количество (из файла .xlsx или из сохранённого подсчёта) и сравните с фактически отсканированным.</string>
+    <string name="expected_block">1. Плановое количество (план)</string>
+    <string name="fact_block">2. Фактическое количество (факт)</string>
+    <string name="load_expected_file">Загрузить план из .xlsx</string>
+    <string name="load_expected_saved">Взять план из сохранённого</string>
+    <string name="expected_qty_col">Колонка «Количество» (план)</string>
+    <string name="expected_loaded_fmt">План загружен: %1$d позиций</string>
+    <string name="fact_from_scan">Факт = текущий подсчёт сканирования</string>
+    <string name="fact_loaded_fmt">Факт: %1$d позиций</string>
+    <string name="compare_btn">Сравнить</string>
+    <string name="no_data_compare">Нужно загрузить и план, и факт.</string>
+    <string name="discrepancies">Результат сверки</string>
+    <string name="col_expected">План</string>
+    <string name="col_fact">Факт</string>
+    <string name="col_diff">Расхожд.</string>
+    <string name="status_match">Совпадает</string>
+    <string name="status_shortage">Недостача</string>
+    <string name="status_surplus">Излишек</string>
+    <string name="status_missing">Не отсканирован</string>
+    <string name="status_extra">Лишний (нет в плане)</string>
+    <string name="summary_fmt">Совпадает: %1$d · Недостача: %2$d · Излишек: %3$d · Не отскан.: %4$d · Лишних: %5$d</string>
+    <string name="export_report">Экспорт отчёта (CSV)</string>
+    <string name="filter_all">Все</string>
+    <string name="filter_problems">Только расхождения</string>
+
+    <!-- Настройки -->
+    <string name="settings_title">Настройки</string>
+    <string name="scanner_mode">Режим сканера</string>
+    <string name="mode_keyboard">Клавиатурный (по умолчанию)</string>
+    <string name="mode_keyboard_desc">Сканер вводит штрихкод как с клавиатуры и завершает вводом Enter. Подходит для большинства терминалов без настройки.</string>
+    <string name="mode_broadcast">Broadcast (Intent)</string>
+    <string name="mode_broadcast_desc">Сканер рассылает результат через системный Broadcast. Нужно включить этот режим в приложении «ScanSetting» терминала UROVO.</string>
+    <string name="broadcast_action">Action (Broadcast)</string>
+    <string name="broadcast_extra">Имя extra с данными</string>
+    <string name="feedback">Звук и вибрация</string>
+    <string name="vibrate">Вибрация при сканировании</string>
+    <string name="sound_on_scan">Звук при сканировании</string>
+    <string name="settings_saved">Настройки сохранены</string>
+    <string name="restart_needed">Смена языка применится ко всему приложению</string>
+    <string name="about">О приложении</string>
+    <string name="about_text">Сканер склада для терминала сбора данных UROVO DT40.\nФункции: базы товаров по магазинам, подсчёт при сканировании, сверка план/факт.</string>
+</resources>

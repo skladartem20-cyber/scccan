@@ -1,0 +1,131 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="app_name">仓库扫描器</string>
+
+    <!-- 通用 -->
+    <string name="ok">确定</string>
+    <string name="cancel">取消</string>
+    <string name="yes">是</string>
+    <string name="no">否</string>
+    <string name="close">关闭</string>
+    <string name="save">保存</string>
+    <string name="delete">删除</string>
+    <string name="rename">重命名</string>
+    <string name="share">分享</string>
+    <string name="search">搜索</string>
+    <string name="add">添加</string>
+    <string name="empty">空</string>
+
+    <!-- 主菜单 -->
+    <string name="menu_stores">店铺（商品库）</string>
+    <string name="menu_stores_desc">导入 .xlsx 商品库，将库绑定到店铺，选择当前库</string>
+    <string name="menu_scan">扫描与计数</string>
+    <string name="menu_scan_desc">快速扫描整托商品：统计每种商品扫描了多少</string>
+    <string name="menu_reconcile">核对与差异</string>
+    <string name="menu_reconcile_desc">实际数量与计划数量对比，查找缺货与多货</string>
+    <string name="menu_settings">设置</string>
+    <string name="menu_settings_desc">语言、扫描模式、声音与振动</string>
+    <string name="language">语言</string>
+    <string name="lang_ru">俄语 Русский</string>
+    <string name="lang_zh">中文</string>
+    <string name="active_store_none">未选择当前库</string>
+    <string name="active_store_fmt">当前库：%1$s</string>
+
+    <!-- 店铺 -->
+    <string name="stores_title">店铺与商品库</string>
+    <string name="import_db">导入商品库 (.xlsx)</string>
+    <string name="no_stores">还没有任何商品库。请点击「导入商品库」加载店铺的 .xlsx 文件。</string>
+    <string name="products_count_fmt">商品数：%1$d</string>
+    <string name="set_active">设为当前库</string>
+    <string name="store_active_badge">当前</string>
+    <string name="store_deleted">已删除商品库</string>
+    <string name="delete_store_confirm_fmt">删除商品库「%1$s」及其全部商品？</string>
+    <string name="rename_store">店铺 / 库名称</string>
+    <string name="store_selected_fmt">当前库：%1$s</string>
+
+    <!-- 导入 / 列映射 -->
+    <string name="import_parsing">正在读取文件…</string>
+    <string name="import_error">无法读取文件，请确认为 .xlsx 格式。</string>
+    <string name="import_no_rows">文件中未找到商品行。</string>
+    <string name="mapping_title">列与店铺绑定</string>
+    <string name="mapping_hint">请确认列识别正确，填写店铺名称并保存商品库。</string>
+    <string name="sheet_label">工作表</string>
+    <string name="header_row">表头所在行</string>
+    <string name="barcode_col">「条形码」列</string>
+    <string name="name_col">「商品名称」列</string>
+    <string name="article_col">「货号」列（可选）</string>
+    <string name="column_none">— 无 —</string>
+    <string name="rows_detected_fmt">识别到商品：%1$d</string>
+    <string name="store_name_hint">店铺 / 库名称</string>
+    <string name="store_note_hint">备注（可选）</string>
+    <string name="store_name_required">请填写店铺名称</string>
+    <string name="barcode_col_required">请选择条形码所在列</string>
+    <string name="preview">预览</string>
+    <string name="save_store">保存商品库</string>
+    <string name="store_saved_fmt">商品库「%1$s」已保存（%2$d 件商品）</string>
+
+    <!-- 扫描 -->
+    <string name="scan_title">扫描与计数</string>
+    <string name="scan_hint">逐个扫描商品，应用会统计每个条形码的数量。</string>
+    <string name="no_active_store_warn">未选择当前库——将不显示商品名称。请在「店铺」中选择库。</string>
+    <string name="last_scanned">最近扫描</string>
+    <string name="not_in_base">库中不存在</string>
+    <string name="unknown_product">未知商品</string>
+    <string name="total_lines_fmt">条目：%1$d</string>
+    <string name="total_qty_fmt">总数量：%1$d</string>
+    <string name="clear_all">清空</string>
+    <string name="clear_confirm">清空当前全部计数？</string>
+    <string name="manual_input">手动输入条形码</string>
+    <string name="barcode_hint">条形码</string>
+    <string name="remove_line">移除该条目</string>
+    <string name="export">导出 (CSV)</string>
+    <string name="exported_fmt">已保存到文件：\n%1$s</string>
+    <string name="save_as_expected">保存为核对「计划」</string>
+    <string name="saved_expected">当前计数已保存为计划数量</string>
+    <string name="qty_col">数量</string>
+    <string name="session_saved">计数已保存</string>
+
+    <!-- 核对 -->
+    <string name="reconcile_title">核对与差异</string>
+    <string name="reconcile_hint">加载计划数量（来自 .xlsx 文件或已保存的计数），与实际扫描数量对比。</string>
+    <string name="expected_block">1. 计划数量（计划）</string>
+    <string name="fact_block">2. 实际数量（实际）</string>
+    <string name="load_expected_file">从 .xlsx 加载计划</string>
+    <string name="load_expected_saved">使用已保存的计划</string>
+    <string name="expected_qty_col">「数量」列（计划）</string>
+    <string name="expected_loaded_fmt">已加载计划：%1$d 条</string>
+    <string name="fact_from_scan">实际 = 当前扫描计数</string>
+    <string name="fact_loaded_fmt">实际：%1$d 条</string>
+    <string name="compare_btn">对比</string>
+    <string name="no_data_compare">需要同时加载计划和实际。</string>
+    <string name="discrepancies">核对结果</string>
+    <string name="col_expected">计划</string>
+    <string name="col_fact">实际</string>
+    <string name="col_diff">差异</string>
+    <string name="status_match">一致</string>
+    <string name="status_shortage">缺货</string>
+    <string name="status_surplus">多货</string>
+    <string name="status_missing">未扫描</string>
+    <string name="status_extra">多余（计划中没有）</string>
+    <string name="summary_fmt">一致：%1$d · 缺货：%2$d · 多货：%3$d · 未扫：%4$d · 多余：%5$d</string>
+    <string name="export_report">导出报告 (CSV)</string>
+    <string name="filter_all">全部</string>
+    <string name="filter_problems">只看差异</string>
+
+    <!-- 设置 -->
+    <string name="settings_title">设置</string>
+    <string name="scanner_mode">扫描模式</string>
+    <string name="mode_keyboard">键盘模式（默认）</string>
+    <string name="mode_keyboard_desc">扫描器像键盘一样输入条形码并以 Enter 结束。多数终端无需设置即可使用。</string>
+    <string name="mode_broadcast">广播模式 (Intent)</string>
+    <string name="mode_broadcast_desc">扫描器通过系统广播发送结果。需在 UROVO 终端的「ScanSetting」应用中开启该模式。</string>
+    <string name="broadcast_action">广播 Action</string>
+    <string name="broadcast_extra">数据 extra 名称</string>
+    <string name="feedback">声音与振动</string>
+    <string name="vibrate">扫描时振动</string>
+    <string name="sound_on_scan">扫描时声音</string>
+    <string name="settings_saved">设置已保存</string>
+    <string name="restart_needed">语言将应用于整个应用</string>
+    <string name="about">关于</string>
+    <string name="about_text">用于 UROVO DT40 数据采集终端的仓库扫描器。\n功能：按店铺管理商品库、扫描计数、计划/实际核对。</string>
+</resources>

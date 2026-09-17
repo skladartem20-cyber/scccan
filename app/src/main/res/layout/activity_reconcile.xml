@@ -1,0 +1,153 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/bg">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical"
+        android:padding="14dp">
+
+        <TextView
+            android:id="@+id/hint"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:textColor="@color/text_muted"
+            android:textSize="13sp" />
+
+        <!-- План -->
+        <LinearLayout
+            style="@style/Card"
+            android:layout_marginTop="10dp">
+
+            <TextView style="@style/SectionTitle" android:text="@string/expected_block" />
+
+            <TextView
+                android:id="@+id/expected_status"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="4dp"
+                android:textColor="@color/text"
+                android:textSize="13sp" />
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="6dp"
+                android:orientation="horizontal">
+
+                <com.google.android.material.button.MaterialButton
+                    android:id="@+id/btn_load_file"
+                    style="@style/OutlineButton"
+                    android:layout_width="0dp"
+                    android:layout_weight="1"
+                    android:text="@string/load_expected_file"
+                    android:textSize="11sp" />
+
+                <com.google.android.material.button.MaterialButton
+                    android:id="@+id/btn_load_saved"
+                    style="@style/OutlineButton"
+                    android:layout_width="0dp"
+                    android:layout_marginStart="8dp"
+                    android:layout_weight="1"
+                    android:text="@string/load_expected_saved"
+                    android:textSize="11sp" />
+            </LinearLayout>
+        </LinearLayout>
+
+        <!-- Факт -->
+        <LinearLayout
+            style="@style/Card"
+            android:layout_marginTop="10dp">
+
+            <TextView style="@style/SectionTitle" android:text="@string/fact_block" />
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="4dp"
+                android:text="@string/fact_from_scan"
+                android:textColor="@color/text_muted"
+                android:textSize="12sp" />
+
+            <TextView
+                android:id="@+id/fact_status"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="2dp"
+                android:textColor="@color/text"
+                android:textSize="13sp" />
+        </LinearLayout>
+
+        <com.google.android.material.button.MaterialButton
+            android:id="@+id/btn_compare"
+            style="@style/PrimaryButton"
+            android:layout_marginTop="12dp"
+            android:text="@string/compare_btn" />
+
+        <TextView
+            android:id="@+id/summary"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="10dp"
+            android:background="@drawable/card_bg"
+            android:padding="10dp"
+            android:textColor="@color/text"
+            android:textSize="12sp"
+            android:visibility="gone" />
+
+        <!-- фильтр + экспорт -->
+        <LinearLayout
+            android:id="@+id/filter_row"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="10dp"
+            android:gravity="center_vertical"
+            android:orientation="horizontal"
+            android:visibility="gone">
+
+            <TextView
+                android:id="@+id/filter_all"
+                style="@style/FilterChip"
+                android:text="@string/filter_all" />
+
+            <TextView
+                android:id="@+id/filter_problems"
+                style="@style/FilterChip"
+                android:layout_marginStart="8dp"
+                android:text="@string/filter_problems" />
+
+            <View
+                android:layout_width="0dp"
+                android:layout_height="1dp"
+                android:layout_weight="1" />
+
+            <com.google.android.material.button.MaterialButton
+                android:id="@+id/btn_export"
+                style="@style/OutlineButton"
+                android:layout_width="wrap_content"
+                android:text="@string/export_report"
+                android:textSize="11sp" />
+        </LinearLayout>
+
+        <androidx.recyclerview.widget.RecyclerView
+            android:id="@+id/list"
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:layout_marginTop="10dp"
+            android:layout_weight="1"
+            android:clipToPadding="false"
+            android:paddingBottom="16dp" />
+
+    </LinearLayout>
+
+    <ProgressBar
+        android:id="@+id/progress"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center"
+        android:visibility="gone" />
+
+</FrameLayout>
